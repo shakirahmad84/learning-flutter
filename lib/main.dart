@@ -9,8 +9,12 @@ class MyApp extends StatelessWidget{
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: HomeActivity(),
+      theme: ThemeData(primarySwatch: Colors.green),
+      darkTheme: ThemeData(primarySwatch: Colors.amber),
+      color: Colors.blue,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
