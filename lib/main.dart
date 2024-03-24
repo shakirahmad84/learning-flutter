@@ -24,9 +24,12 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("shakir"),),
+      appBar: AppBar(title: const Text("App Bar"),),
       body: const Text("Body"),
+      drawer: Text(""),
+      endDrawer: Text(""),
+      bottomNavigationBar: Text("Bottom Navigation Bar"),
+      floatingActionButton: Text("Button"),
     );
   }
-
 }
