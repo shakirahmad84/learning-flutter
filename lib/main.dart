@@ -21,15 +21,33 @@ class MyApp extends StatelessWidget{
 
 class HomeActivity extends StatelessWidget{
   const HomeActivity({super.key});
+
+  MySnackBar(message, context){
+    return ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message))
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("App Bar"),),
-      body: const Text("Body"),
-      drawer: Text(""),
-      endDrawer: Text(""),
-      bottomNavigationBar: Text("Bottom Navigation Bar"),
-      floatingActionButton: Text("Button"),
+      appBar: AppBar(
+        backgroundColor: Colors.amber,
+        title: const Text("Inventory App"),
+        titleTextStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+        titleSpacing: 15,
+        // centerTitle: true,
+        toolbarHeight: 60,
+        toolbarOpacity: 1,
+        toolbarTextStyle: TextStyle(color: Colors.white),
+        elevation: 0,
+        actions: [
+          IconButton(onPressed: (){MySnackBar("Comments", context);}, icon: Icon(Icons.comment)),
+          IconButton(onPressed: (){MySnackBar("Search", context);}, icon: Icon(Icons.search)),
+          IconButton(onPressed: (){MySnackBar("Settings", context);}, icon: Icon(Icons.settings)),
+          IconButton(onPressed: (){MySnackBar("Email", context);}, icon: Icon(Icons.email)),
+        ],
+      ),
     );
   }
 }
