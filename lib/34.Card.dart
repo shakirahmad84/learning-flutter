@@ -31,11 +31,17 @@ class HomeActivity extends StatelessWidget{
         backgroundColor: Colors.yellow,
       ),
       body: Center(
-        child: FractionallySizedBox(
-          widthFactor: 0.5,
-          heightFactor: 0.3,
-          child: Container(
-            color: Colors.green,
+        child: Card(
+          shape: RoundedRectangleBorder(borderRadius:  BorderRadius.circular(30)),
+          color: Color.fromRGBO(33, 191, 115, 1),
+          shadowColor: Color.fromRGBO(176, 234, 205, 1),
+          elevation: 80,
+          child: SizedBox(
+            width: 200,
+            height: 200,
+            child: Center(
+              child: Text('This is card'),
+            ),
           ),
         ),
       ),

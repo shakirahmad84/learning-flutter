@@ -30,10 +30,13 @@ class HomeActivity extends StatelessWidget{
         title: Text("My App"),
         backgroundColor: Colors.yellow,
       ),
-      body: Center(
-        child: FractionallySizedBox(
-          widthFactor: 0.5,
-          heightFactor: 0.3,
+      body: Container(
+        width: double.infinity,
+        height: 300,
+        color: Colors.red,
+        alignment: Alignment.center,
+        child: AspectRatio(
+          aspectRatio: 16/9,
           child: Container(
             color: Colors.green,
           ),

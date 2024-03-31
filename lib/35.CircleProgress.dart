@@ -31,13 +31,11 @@ class HomeActivity extends StatelessWidget{
         backgroundColor: Colors.yellow,
       ),
       body: Center(
-        child: FractionallySizedBox(
-          widthFactor: 0.5,
-          heightFactor: 0.3,
-          child: Container(
-            color: Colors.green,
-          ),
-        ),
+          child: CircularProgressIndicator(
+            color: Colors.red,
+            strokeWidth: 10,
+            backgroundColor: Colors.yellow,
+          )
       ),
     );
   }
